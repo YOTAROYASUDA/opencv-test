@@ -6,9 +6,13 @@
   </head>
   <body>
     <h2>Webカメラ + OpenCV.js</h2>
-    <video id="cam_input" autoplay playsinline width="320" height="240"></video>
-    <canvas id="canvas_output" width="320" height="240" willReadFrequently="true"></canvas>
-
+    <div>
+      <video id="cam_input" autoplay playsinline width="320" height="240"></video>
+    </div>
+    <div>
+      <canvas id="canvas_output" width="320" height="240" willReadFrequently="true"></canvas>
+    </div>
+    
     <!-- OpenCV.jsをグローバルスコープに読み込む -->
     <script src="opencv.js"></script>
     <!-- Viteのエントリーポイント -->
