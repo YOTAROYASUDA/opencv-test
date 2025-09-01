@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Webcam + OpenCV.js</title>
-    <script type="module" crossorigin src="/opencv-test/assets/index-BIh4MeBt.js"></script>
-  </head>
-  <body>
-    <h2>Webカメラ + OpenCV.js</h2>
+<head>
+    <meta charset="UTF-8">
+    <title>ブドウ葉 異常検知システム</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; }
+        video, canvas { border: 1px solid black; margin: 10px; }
+        #status { font-weight: bold; color: #333; }
+    </style>
+  <script type="module" crossorigin src="/opencv-test/assets/index-DCthWasr.js"></script>
+</head>
+<body>
+    <h1>ブドウ葉 異常検知システム</h1>
     <div>
-      <video id="cam_input" autoplay playsinline width="320" height="240"></video>
+        <video id="video" width="640" height="480" autoplay playsinline style="display: none;"></video>
+        <canvas id="canvasOutput"></canvas>
     </div>
-    <div>
-      <canvas id="canvas_output" width="320" height="240" willReadFrequently="true"></canvas>
-    </div>
-    
-    <!-- OpenCV.jsをグローバルスコープに読み込む -->
-    <script src="opencv.js"></script>
-    <!-- Viteのエントリーポイント -->
-  </body>
+    <p>異常検知率: <span id="detectionRate">0</span>%</p>
+    <p id="status">OpenCV.jsをロード中です...</p>
+
+    <script src="/opencv-test/opencv.js"></script> 
+</body>
 </html>
